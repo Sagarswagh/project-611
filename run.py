@@ -7,10 +7,11 @@ from visualizations.plot_time_to_update import plot_time_to_update
 from label_analysis import LabelAnalysis
 from top_commenters_vs_creators_analysis import TopCommentersVsCreatorsAnalysis
 from Issue_creation_analysis import MonthlyIssueAnalysis
+from issue_response_time_analysis import IssueResponseTimeAnalysis
 
 def main():
     parser = argparse.ArgumentParser(description='Analyze GitHub issues data.')
-    parser.add_argument('--feature', type=int, choices=[1, 2, 3, 4, 5], required=True, help='Choose feature to run')
+    parser.add_argument('--feature', type=int, choices=[1, 2, 3, 4, 5, 6], required=True, help='Choose feature to run')
     args = parser.parse_args()
 
     issues = load_issues()
@@ -30,6 +31,8 @@ def main():
         TopCommentersVsCreatorsAnalysis().run()
     elif args.feature ==5:
         MonthlyIssueAnalysis().run()
+    elif args.feature ==6:
+        IssueResponseTimeAnalysis().run()
 
 
     

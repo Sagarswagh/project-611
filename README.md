@@ -47,3 +47,41 @@ That will output basic information about the issues to the command line.
 To make the application easier to debug, runtime configurations are provided to run each of the analyses you are implementing. When you click on the run button in the left-hand side toolbar, you can select to run one of the three analyses or run the file you are currently viewing. That makes debugging a little easier. This run configuration is specified in the `.vscode/launch.json` if you want to modify it.
 
 The `.vscode/settings.json` also customizes the VSCode user interface sligthly to make navigation and debugging easier. But that is a matter of preference and can be turned off by removing the appropriate settings.
+
+---- feature 3
+
+`label_analysis.py`: This module runs a top-three issue label analysis over time, examining issue creation and resolution patterns. The run() method loads issues from a data source, processes them into a DataFrame, identifies the top three labels based on frequency, and plots a yearly bar chart showing the number of resolved issues for each top label.
+
+------
+Explanation of "Top Commenters vs Top Issue Creators"  -- feature 4
+
+ What the Graph Shows:
+- Left Chart (Top 10 Issue Creators): This bar chart shows the top 10 contributors who have created the most issues in the project. Each bar represents a contributor, and the length of the bar indicates how many issues they have created.
+  
+- Right Chart (Top 10 Commenters): This bar chart shows the top 10 contributors who have made the most comments on issues. Each bar represents a contributor, and the length of the bar indicates how many comments they have made.
+
+ Why It’s Interesting:
+- Different Roles in the Project: This comparison allows us to see how different contributors engage with the project. Some contributors may be more focused on reporting issues, while others are more active in providing feedback or solutions through comments.
+  
+- Notable Observations:
+  - abn appears in both charts, indicating that they are not only active in creating issues but also in commenting on them. This suggests that abn is a highly engaged contributor who participates in both identifying and discussing issues.
+  - dimbleby, on the other hand, is primarily engaged in commenting, with over 700 comments but no significant issue creation. This suggests that dimbleby plays a key role in discussions and providing feedback rather than reporting new issues.
+  
+- Insight into Contributor Behavior: This analysis helps us understand the roles different contributors play in the project. Some may specialize in identifying problems (issue creators), while others focus on discussing and resolving them (commenters).
+
+---
+
+ Explanation of "Distribution of Issue Response Times"  --- feature 6
+
+ What the Graph Shows:
+- This histogram shows how quickly issues receive their first response after being created. The x-axis represents response time in days, and the y-axis represents the number of issues.
+  
+ Why It’s Interesting:
+- Quick Responses for Most Issues: The graph reveals that a large majority of issues receive a response very quickly, with over 5573 issues being responded to within just a few days. This suggests that the project is actively maintained, with contributors responding promptly to new issues.
+  
+- Outliers with Long Response Times: However, we also see a small number of outliers where issues took much longer to receive a response — some even taking up to 1400 days. These outliers could indicate lower-priority or more complex issues that took longer to address.
+  
+- Project Health Indicator: A quick response time is often a sign of an active and well-maintained project. However, identifying long-standing unresolved issues could help prioritize future work and improve overall project health.
+
+
+----

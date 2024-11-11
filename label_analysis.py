@@ -8,7 +8,7 @@ import config
 
 class LabelAnalysis:
     """
-    Implements an top 5 issue analysis over time with
+    Implements an top 3 issue analysis over time with
     average issues resolution and creation over a month
     """
     
@@ -45,7 +45,7 @@ class LabelAnalysis:
 
         # counting the labels
         label_count=df.groupby("labels").size().reset_index(name="count")
-        # Top 5 labels
+        # Top 3 labels
         labels=label_count.sort_values(by="count",ascending=False).head(3)['labels']
 
         label_data=[]
@@ -79,4 +79,4 @@ class LabelAnalysis:
 
 if __name__ == '__main__':
     # Invoke run method when running this module directly
-    IssueAnalysis().run()
+    LabelAnalysis().run()

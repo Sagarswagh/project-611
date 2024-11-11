@@ -8,6 +8,7 @@ This application template implements some of the basic functions:
 - `model.py`: Implements the data model into which the data file is loaded. The data can then be accessed by accessing the fields of objects.
 - `config.py`: Supports configuring the application via the `config.json` file. You can add other configuration paramters to the `config.json` file.
 - `run.py`: This is the module that will be invoked to run your application. Based on the `--feature` command line parameter, one of the three analyses you implemented will be run. You need to extend this module to call other analyses.
+- `label_analysis.py`: This module runs a top-three issue label analysis over time, examining issue creation and resolution patterns. The run() method loads issues from a data source, processes them into a DataFrame, identifies the top three labels based on frequency, and plots a yearly bar chart showing the number of resolved issues for each top label.
 
 With the utility functions provided, you should focus on implementing creative analyses that generate intersting and insightful insights.
 

@@ -6,6 +6,7 @@ from analysis.time_to_update_analysis import time_to_update
 from visualizations.plot_time_to_update import plot_time_to_update
 from label_analysis import LabelAnalysis
 from top_commenters_vs_creators_analysis import TopCommentersVsCreatorsAnalysis
+from Issue_creation_analysis import MonthlyIssueAnalysis
 
 def main():
     parser = argparse.ArgumentParser(description='Analyze GitHub issues data.')
@@ -15,7 +16,6 @@ def main():
     issues = load_issues()
 
     if args.feature == 1:
-        print('hi')
         label_counts = analyze_issue_labels(issues)
         print("Label Counts:", label_counts)
         plot_label_distribution(label_counts)
@@ -28,6 +28,8 @@ def main():
         LabelAnalysis().run()
     elif args.feature ==4:
         TopCommentersVsCreatorsAnalysis().run()
+    elif args.feature ==5:
+        MonthlyIssueAnalysis().run()
 
 
     

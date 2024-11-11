@@ -4,6 +4,7 @@ from analysis.label_analysis import analyze_issue_labels
 from visualizations.plot_labels import plot_label_distribution
 from analysis.time_to_update_analysis import time_to_update
 from visualizations.plot_time_to_update import plot_time_to_update
+from label_analysis import LabelAnalysis
 
 def main():
     parser = argparse.ArgumentParser(description='Analyze GitHub issues data.')
@@ -22,6 +23,9 @@ def main():
         time_differences = time_to_update(issues)
         # Plot the results
         plot_time_to_update(time_differences)
+    elif args.feature ==3:
+        LabelAnalysis().run()
+
 
     
 

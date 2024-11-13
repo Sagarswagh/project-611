@@ -81,14 +81,13 @@ Why It’s Interesting:
 
 Notable Observations:
 
-There are several prominent spikes in issue creation:
+- There are several prominent spikes in issue creation:
 1. Mid-2019: A peak close to 110 issues in a single month.
 2. Early 2021: The highest spike, reaching approximately 160 issues in that month.
 3. Early 2023: Another significant peak with about 120 issues.
 
 These spikes likely indicate moments of intense project activity, such as major updates, new features, or specific issues prompting more user reports. Following these peaks, the graph shows notable drops to levels closer to 40-60 issues per month, suggesting periods of resolution or lower engagement.
 
-Insight into Contributor Behavior:
 - The graph suggests periodic engagement from contributors, with noticeable activity spikes approximately every 6-12 months. For example, late 2019 and early 2021 were times of high activity, with issues surpassing 100 each month. This trend indicates contributors may be responding to specific project milestones, major updates, or external factors driving engagement.
 
 ---

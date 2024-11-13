@@ -80,6 +80,7 @@ Why It’s Interesting:
 - Activity Patterns: This graph visually highlights the patterns of issue creation over time, revealing how the project has fluctuated in activity. Observing peaks and troughs in the data provides insight into project phases, major updates, or even seasonal factors influencing engagement. For example, some months show around 100-120 issues, while the highest observed peak reaches about 160 issues, suggesting periods of heightened engagement, possibly due to major releases or updates that triggered more user reports.
 
 Notable Observations:
+
 There are several prominent spikes in issue creation:
 1. Mid-2019: A peak close to 110 issues in a single month.
 2. Early 2021: The highest spike, reaching approximately 160 issues in that month.
